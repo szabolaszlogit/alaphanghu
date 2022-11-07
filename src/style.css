@@ -136,21 +136,54 @@ table {
 
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 .wrapper {
-  display: flex; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: var(---grey);
 }
 
-main{
-  max-width: 100%; 
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  margin-top: 1rem;
+}
+
+main {
+  background-color: var(--grey);
+  padding: 1rem;
+  width: 100vw;
+  height: max-content;
+}
+
+.info {
+  background-color: var(--green);
+  padding: 1rem;
+  margin: 1rem 0;
+  color: var(--black);
+}
+
+img{
+  max-width: 90vw;
+  display: block;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 576px) {
-  main{
-    max-width: 60%; 
-    margin: 0 auto;
+  main {
+    min-width: 50vw;
+    max-width: 60vw;
+    padding: 1rem;
+  }
+
+  .wrapper {
+    margin: 1rem;
   }
 }

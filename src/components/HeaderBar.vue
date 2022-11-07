@@ -22,10 +22,11 @@ let isOpen = ref(false);
   </header>
 
   <Transition name="slide">
-    <nav v-if="isOpen">
-      <router-link v-for="link in links" :to="link.to">{{
-        link.txt
-      }}</router-link>
+    <nav v-if="isOpen" v-on:click="isOpen = !isOpen">
+      <div v-for="link in links">
+        <router-link v-if="link.to" :to="link.to">{{ link.txt }}</router-link>
+        <div v-if="link.title" class="title">{{ link.title }}</div>
+      </div>
     </nav>
   </Transition>
 </template>
@@ -75,6 +76,15 @@ nav a {
   margin-bottom: 1rem;
 }
 
+img{
+  display: inline-block;
+  margin:0;
+}
+
+.title {
+  margin: 1rem 0;
+  color: var(--green);
+}
 
 .router-link-exact-active {
   color: var(--blue);
@@ -107,6 +117,9 @@ nav a {
   }
   nav {
     display: none;
+  }
+  nav a:hover {
+    color: hotpink;
   }
 }
 </style>

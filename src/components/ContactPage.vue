@@ -1,8 +1,10 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-    contact page
+  <h1>Kapcsolat</h1>
+  <p>alaphang.contact@gmail.com</p>
+
+  <p>Hibát találtál, vagy kérésed, kérdésed van? Írj bátran!</p>
 </template>
 
 <style></style>

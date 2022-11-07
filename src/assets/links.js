@@ -1,23 +1,13 @@
 const links = [
-    {to: "/", txt: "Kezdőlap"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "A gitár"},
-    {to: "/kapcsolat", txt: "Mi a gitár?"},
-    {to: "/kapcsolat", txt: "Gitárfajták"},
-    {to: "/kapcsolat", txt: "Húrok"},
-    {to: "/kapcsolat", txt: "Milyen gitárt vegyek?"},
-    {to: "/kapcsolat", txt: "Az elektromos gitár"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-    {to: "/kapcsolat", txt: "Kapcsolat"},
-]
+  { to: "/", txt: "Kezdőlap" },
+  { to: "/kapcsolat", txt: "Kapcsolat" },
+  { to: "/tools", txt: "Tools" },
+  { title: "A gitár" },
+  { to: "/gitar", txt: "Mi a gitár?" },
+  { to: "/gitarfajtak", txt: "Gitárfajták" },
+  { to: "/hurok", txt: "Húrok" },
+  { to: "/gitarvalasztas", txt: "Milyen gitárt vegyek?" },
+  { title: "Az elektromos gitár" },
+];
 
-export default links
-
+export default links;
