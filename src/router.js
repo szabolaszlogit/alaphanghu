@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const HomePage = () => import("./components/HomePage.vue");
 const ContactPage = () => import("./components/ContactPage.vue");
-const ToolsPost = () => import("./posts/ToolsPost.vue");
+const TransPonator = () => import("./posts/TransPonator.vue");
 const ChordProgression = () => import("./posts/ChordProgression.vue");
 const GuitarPost = () => import("./posts/GuitarPost.vue");
 const GuitarTypes = () => import("./posts/GuitarTypes.vue");
@@ -21,9 +21,9 @@ const routes = [
     component: ContactPage,
   },  
   {
-    path: "/tools",
-    name: "tools",
-    component: ToolsPost,
+    path: "/transzponator",
+    name: "TansPonator",
+    component: TransPonator,
   },  
   {
     path: "/akkordmenetek",

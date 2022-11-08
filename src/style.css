@@ -2,7 +2,6 @@
 @import "./assets/css/select.css";
 @import "./assets/css/animation.css";
 
-
 /* custom */
 
 :root {
@@ -52,11 +51,11 @@ main {
   color: var(--black);
 }
 
-.info-grey{
+.info-grey {
   background-color: var(--grey);
 }
 
-img{
+img {
   max-width: 90vw;
   display: block;
   margin: 0 auto;
@@ -67,7 +66,7 @@ img{
   background-color: var(--blue);
   color: var(--white);
   margin: 0.2rem 0.5rem;
-  width: 6ch;
+  min-width: 6ch;
   display: inline-block;
 }
 

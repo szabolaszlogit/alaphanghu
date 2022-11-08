@@ -1,7 +1,7 @@
 const links = [
   { to: "/", txt: "Kezdőlap" },
   { to: "/kapcsolat", txt: "Kapcsolat" },
-  { to: "/tools", txt: "Tools" },
+  { to: "/transzponator", txt: "Transzponátor" },
   { to: "/akkordmenetek", txt: "Akkordmenetek" },
   { title: "A gitár" },
   { to: "/gitar", txt: "Mi a gitár?" },
