@@ -76,9 +76,9 @@ nav a {
   margin-bottom: 1rem;
 }
 
-img{
+img {
   display: inline-block;
-  margin:0;
+  margin: 0;
 }
 
 .title {
@@ -91,18 +91,6 @@ img{
 }
 .router-link-active {
   color: var(--red);
-}
-.slide-leave-active,
-.slide-enter-active {
-  transition: 1s;
-}
-.slide-enter-from {
-  transform: translate(-100%, 0);
-  opacity: 0.3;
-}
-.slide-leave-to {
-  transform: translate(-100%, 0);
-  opacity: 0;
 }
 
 @media screen and (min-width: 576px) {

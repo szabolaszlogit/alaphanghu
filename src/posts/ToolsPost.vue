@@ -59,33 +59,55 @@ function removeCustomNote(index) {
     okokból. Ilyenkor meg lehet próbálni a dalt mélyebben vagy magasabban, azaz
     másik hangnemben eljátszani.
   </p>
-  <p>1. Add meg a dal akkordjait. Itt nem számít, hogy dúr vagy moll. </p>
-  <p>2. Add meg, hány félhanggal szeretnéd feljebb, vagy lejebb transzponálni</p>
-  <p>3. Az akkordokat úgy tudod törölni, ha rájuk kattintasz</p>
-  <label for="cars">Akkord hozzáaádsa:</label>
-  <select v-model="selectedNote">
+  <div class="info">
+    <p>1. Add meg a dal akkordjait. Itt nem számít, hogy dúr vagy moll.</p>
+    <p>
+      2. Add meg, hány félhanggal szeretnéd feljebb, vagy lejebb transzponálni
+    </p>
+    <p>3. Az akkordokat úgy tudod törölni, ha rájuk kattintasz</p>
+  </div>
+  <label for="note">Akkord hozzáaádása:</label>
+  <select class="select" name="note" v-model="selectedNote">
     <option v-for="note in notes" :value="note">
       {{ note.name }}
     </option>
   </select>
 
   <br />
-  <input type="number" min="-12" max="12" v-model.number="step" />
-  <br />
-  {{ step }}
-  <br />
+  <label for="step">Transzponálás mértéke:</label>
+  <input
+    type="number"
+    aria-label="Transzponálás mértéke"
+    min="-12"
+    max="12"
+    name="step"
+    v-model.number="step"
+  />
+  <Transition name="fade">
+    <div class="info info-grey" v-if="customNotes.length">
+      <p>Eredeti akkordok</p>
+      <TransitionGroup name="list">
+      <span
+        class="note note-green"
+        v-for="(note, index) in customNotes" :key="index"
+        v-on:click="removeCustomNote(index)"
+        >{{ note.name }}</span
+      >  </TransitionGroup>
+    </div>
+  </Transition>
+  <Transition name="fade">
+    <div class="info" v-if="tranposedCustomNotes.length">
+      <p>Transzponált akkordok</p>
 
-  <div>
-    <span
-      v-for="(note, index) in customNotes"
-      v-on:click="removeCustomNote(index)"
-      >{{ note.name }}</span
-    >
-  </div>
-
-  <div v-if="tranposedCustomNotes.length">
-    <span v-for="note in tranposedCustomNotes">{{ note.name }}</span>
-  </div>
+      <span class="note note-blue" v-for="note in tranposedCustomNotes">{{
+        note.name
+      }}</span>
+    </div>
+  </Transition>
 </template>
 
-<style></style>
+<style scoped>
+.note-green {
+  cursor: pointer;
+}
+</style>
