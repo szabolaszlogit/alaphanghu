@@ -28,20 +28,25 @@ const notes = reactive([
   { name: "G#", number: 11 },
 ]);
 const progressions = [
-  {
+{
     name: "1-4-5",
+    steps: [1, 4, 5],
+    dsc: "Az egyik legegyszerűbb, legalapvetőbb forma.",
+  },
+  {
+    name: "1-5-6-4",
     steps: [1, 5, 6, 4],
-    dsc: "dkjasdsh  jhdakjd daskjd hsd jsd",
+    dsc: "A nyugati zene egyik legtöbbet használt akkordmenete. Gyakran más sorrendben, de ugyanazeket az akkordokat használják.",
   },
   {
-    name: "1-2-5",
-    steps: [6, 4, 1, 5],
-    dsc: "dkjasdsh  jhdakjd daskjd hsd jsd",
+    name: "2-5-1-(6)",
+    steps: [2,5,1,6],
+    dsc: "Színtén szélés körben elterjedt, kicsit már jazzes akkordmenet.",
   },
   {
-    name: "1-3-5",
-    steps: [2, 5, 1, 6],
-    dsc: "dkjasdsh  jhdakjd daskjd hsd jsd",
+    name: "1-6-4-5",
+    steps: [1,6,4,5],
+    dsc: "50-es évek, és Mozart.",
   },
 ];
 const selectedNote = ref({ name: "C", number: 3 });
@@ -81,10 +86,13 @@ function generateProgression() {
   for (let index = 0; index < progressions.length; index++) {
     let progression = [];
     progression.length = 0;
-
+    progression.push({ name: progressions[index].name });
+    progression.push({ dsc: progressions[index].dsc });
+    let chords = [];
     for (let i = 0; i < progressions[index].steps.length; i++) {
-      progression.push(generatedScale[progressions[index].steps[i] - 1]);
+      chords.push(generatedScale[progressions[index].steps[i] - 1]);
     }
+    progression.push({ chords: chords });
     generatedProgressions.push(progression);
   }
 
@@ -94,37 +102,46 @@ generateProgression();
 </script>
 
 <template>
-  <input
-    type="radio"
-    id="dur"
-    value="Dúr"
-    v-model="mode"
-    v-on:change="generateProgression()"
-  />
-  <label for="dur">Dúr</label>
-
-  <input
-    type="radio"
-    id="moll"
-    value="Moll"
-    v-model="mode"
-    v-on:change="generateProgression()"
-  />
-  <label for="two">Moll</label>
-
-  <label for="note">Hangnem:</label>
-  <select
-    class="select"
-    name="note"
-    v-model="selectedNote"
-    v-on:change="generateProgression()"
-  >
-    <option v-for="note in notes" :value="note">
-      {{ note.name }}
-    </option>
-  </select> 
-
-  <label for="selectedPogression">Akkordmenet:</label> 
+  <h1>Akkordmenet-generator</h1>
+  <p>
+    Egy adott hangnemben többféle sorrendben használhatjuk az akkordokat. Vannak
+    jellegzetes, jól bevált, vagy éppen egy stilushoz köthető akkordmenetek. Itt
+    ezeket tekintheted meg.
+  </p>
+  <p>
+    Válaszd ki a hangnemet, és azt, hogy a dúr vagy a moll skálát szeretnéd
+    használni.
+  </p>
+  <p>A számok azt jelentik, az akkord a skála hanyadik hangjára épül.</p>
+  <div class="info info-blue">
+    <label for="note">Hangnem:</label>
+    <select
+      class="select"
+      name="note"
+      v-model="selectedNote"
+      v-on:change="generateProgression()"
+    >
+      <option v-for="note in notes" :value="note">
+        {{ note.name }}
+      </option>
+    </select>
+    <input
+      type="radio"
+      id="dur"
+      value="Dúr"
+      v-model="mode"
+      v-on:change="generateProgression()"
+    />
+    <label for="dur">Dúr</label>
+    <input
+      type="radio"
+      id="moll"
+      value="Moll"
+      v-model="mode"
+      v-on:change="generateProgression()"
+    />
+    <label for="moll">Moll</label>
+  </div>
 
   <div class="info info-grey" v-if="scale.length">
     <p>Skála:</p>
@@ -132,19 +149,26 @@ generateProgression();
   </div>
 
   <div class="info info-grey" v-if="scale.length">
-    <p>Akkordmenetek:</p>
+    <h2>Akkordmenetek</h2>
 
-    <div v-for="progression in generatedProgressions">
-      {{ progression.name }}
-      <span class="note note-green" v-for="note in progression">{{
+    <div class="prog" v-for="progression in generatedProgressions">
+      <div>{{ progression[0].name }}</div>
+      <div>{{ progression[1].dsc }}</div>
+      <span class="note note-green" v-for="note in progression[2].chords">{{
         note
       }}</span>
     </div>
+    <br />
   </div>
 </template>
 
 <style scoped>
 .note {
   min-width: 8ch;
+}
+.prog {
+  margin-bottom: 1rem;
+  background-color: var(--blue-light);
+  padding: 1rem;
 }
 </style>

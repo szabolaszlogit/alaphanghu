@@ -1,5 +1,5 @@
 @import "./assets/css/reset.css";
-@import "./assets/css/select.css";
+@import "./assets/css/form.css";
 @import "./assets/css/animation.css";
 
 /* custom */
@@ -54,7 +54,9 @@ main {
 .info-grey {
   background-color: var(--grey);
 }
-
+.info-blue {
+  background-color: var(--blue);
+}
 img {
   max-width: 90vw;
   display: block;
@@ -72,7 +74,7 @@ img {
 
 .note-green {
   background-color: var(--green);
-  color: var(--white);
+  color: var(--black);
 }
 @media screen and (min-width: 576px) {
   main {
