@@ -34,7 +34,10 @@ nav a {
 
 .title{
   margin: 1rem 0;
-  color: var(--green)
+  padding: 0.5rem;
+  color: var(--black);
+  background-color: var(--green);
+
 }
 
 @media screen and (max-width: 576px) {

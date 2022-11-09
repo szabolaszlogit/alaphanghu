@@ -17,6 +17,13 @@ const links = [
   { to: "/effektek", txt: "Effektek" },
   { to: "/erosito-modellezo", txt: "Erősítő modellező szoftver" },
   { to: "/kerdesek", txt: "A nagy kérdések" },
+  { title: "Zeneelmélet" },
+  { to: "/zeneelmelet", txt: "Amit tudni kell" },
+  { to: "/akkord", txt: "Az akkord" },
+  { to: "/jelolesek", txt: "Jelőlések" },
+  { to: "/jelolesek", txt: "Jelőlések" },
+  { to: "/tabulatura", txt: "A tabulatúra" },
+  { to: "/akkordjeloles", txt: "Akkordjelölés" },
 ];
 
 export default links;

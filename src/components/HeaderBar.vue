@@ -82,7 +82,7 @@ img {
 }
 
 .title {
-  margin: 1rem 0;
+  margin: 1rem 0; 
   color: var(--green);
 }
 

@@ -9,9 +9,11 @@
   --blue-light: #b0d8f7;
   --white: #ffffff;
   --black: #000000;
-  --grey: #f0eee9;
+  --grey: #f9fafb;
   --darkgrey: #292d3e;
   --green: #34bf49;
+
+  --green-light: #a7f3d0;
   --red: #ff4c4c;
 }
 
@@ -37,7 +39,7 @@ h2 {
   margin-top: 1rem;
 }
 
-p{
+p {
   margin: 1rem 0;
 }
 
@@ -48,21 +50,20 @@ main {
   height: max-content;
 }
 
-footer{
+footer {
   background-color: var(--black);
   display: flex;
   justify-content: center;
   padding: 1rem;
-
 }
 
-footer a{
-  color:var(--white);
+footer a {
+  color: var(--white);
   text-decoration: none;
 }
 
 .info {
-  background-color: var(--green);
+  background-color: var(--green-light);
   padding: 1rem;
   margin: 1rem 0;
   color: var(--black);
@@ -117,5 +118,8 @@ figcaption {
 
   .wrapper {
     margin: 1rem;
+  }
+  img {
+    max-width: 50vw;
   }
 }

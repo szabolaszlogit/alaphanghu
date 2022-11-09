@@ -4,15 +4,6 @@ const HomePage = () => import("./components/HomePage.vue");
 const ContactPage = () => import("./components/ContactPage.vue");
 const TransPonator = () => import("./posts/TransPonator.vue");
 const ChordProgression = () => import("./posts/ChordProgression.vue");
-const GuitarPost = () => import("./posts/GuitarPost.vue");
-const GuitarTypes = () => import("./posts/GuitarTypes.vue");
-const HurokPost = () => import("./posts/HurokPost.vue");
-const MilyenGuitart = () => import("./posts/MilyenGuitart.vue");
-const ElectricGuitar = () => import("./posts/ElectricGuitar.vue");
-const PickUp = () => import("./posts/PickUp.vue");
-const KezeloSzervek = () => import("./posts/KezeloSzervek.vue");
-const Erosito = () => import("./posts/Erosito.vue");
-const ErositoKezelo = () => import("./posts/ErositoKezelo.vue");
 const routes = [
   {
     path: "/",
@@ -34,48 +25,50 @@ const routes = [
     name: "akkordmenetek",
     component: ChordProgression,
   },
-  {
-    path: "/gitar",
-    name: "gitar",
-    component: GuitarPost,
-  },
-  {
-    path: "/gitarfajtak",
-    name: "gitarfajtak",
-    component: GuitarTypes,
-  },
-  {
-    path: "/hurok",
-    name: "hurok",
-    component: HurokPost,
-  },
+
+  { path: "/gitar", component: () => import("./posts/GuitarPost.vue") },
+
+  { path: "/gitarfajtak", component: () => import("./posts/GuitarTypes.vue") },
+
+  { path: "/hurok", component: () => import("./posts/HurokPost.vue") },
+
   {
     path: "/gitarvalasztas",
-    name: " Gitarvalasztas",
-    component: MilyenGuitart,
+    component: () => import("./posts/MilyenGuitart.vue"),
   },
+
   {
     path: "/elektromos-gitar",
-    name: "ElectricGuitar",
-    component: ElectricGuitar,
+    component: () => import("./posts/ElectricGuitar.vue"),
   },
-  {
-    path: "/hangszedo",
-    name: "hangszedo",
-    component: PickUp,
-  },
+
+  { path: "/hangszedo", component: () => import("./posts/PickUp.vue") },
+
   {
     path: "/kezeloszervek",
-    component: KezeloSzervek,
+    component: () => import("./posts/KezeloSzervek.vue"),
   },
+
+  { path: "/erosito", component: () => import("./posts/Erosito.vue") },
+
   {
-    path: "/erosito",
-    component: () => import("./posts/Erosito.vue"),
+    path: "/erosito-kezeloszervei",
+    component: () => import("./posts/ErositoKezelo.vue"),
   },
-  {path: "/erosito-kezeloszervei", component: () => import("./posts/ErositoKezelo.vue")},
-  {path: "/effektek", component: () => import("./posts/Effects.vue"),},
-  {path: "/erosito-modellezo", component: () => import("./posts/ErositoModellezo.vue")},
-  {path: "/kerdesek", component: () => import("./posts/Kerdesek.vue")},
+  { path: "/effektek", component: () => import("./posts/Effects.vue") },
+  {
+    path: "/erosito-modellezo",
+    component: () => import("./posts/ErositoModellezo.vue"),
+  },
+  { path: "/kerdesek", component: () => import("./posts/Kerdesek.vue") },
+  { path: "/zeneelmelet", component: () => import("./posts/ZeneElmelet.vue") },
+  { path: "/akkord", component: () => import("./posts/Akkord.vue") },
+  { path: "/jelolesek", component: () => import("./posts/Jelolesek.vue") },
+  { path: "/tabulatura", component: () => import("./posts/Tabulatura.vue") },
+  {
+    path: "/akkordjeloles",
+    component: () => import("./posts/Akkordjeloles.vue"),
+  },
 ];
 
 const router = createRouter({
