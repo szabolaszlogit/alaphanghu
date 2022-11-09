@@ -67,7 +67,7 @@
     tartják a hangmagasságot.
   </p>
 
-  <p class="info">Ne menj fellépni, stúdióba, próbálni frissen felrakott h</p>
+  <p class="info">Ne menj fellépni, stúdióba, próbálni frissen felrakott húrokkal, percek alatt elhangolódnak.</p>
 </template>
 
 <style></style>

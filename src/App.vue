@@ -1,6 +1,7 @@
 <script setup>
 import HeaderBar from "./components/HeaderBar.vue";
 import SideBar from "./components/SideBar.vue"; 
+import FooterView from "./components/FooterView.vue"; 
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import SideBar from "./components/SideBar.vue";
       <router-view></router-view>
     </div></main>
   </div>
+  <footer-view></footer-view>
 </template>
 
 <style scoped></style>
