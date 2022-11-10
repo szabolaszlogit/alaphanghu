@@ -5,7 +5,7 @@ const links = [
     head: false,
   },
   {
-    name: "Kapcsolat",
+    name: "ContactPage",
     ref: "/kapcsolat",
     head: false,
   },

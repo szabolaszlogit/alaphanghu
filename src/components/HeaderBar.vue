@@ -24,9 +24,9 @@ let isOpen = ref(false);
   <Transition name="slide">
     <nav v-if="isOpen" v-on:click="isOpen = !isOpen">
       <div v-for="link in links">
-        <router-link v-if="link.to" :to="link.to">{{ link.txt }}</router-link>
-        <div v-if="link.title" class="title">{{ link.title }}</div>
-      </div>
+      <router-link v-if="link.head === false" :to="link.ref">{{ link.name }}</router-link>
+      <div v-if="link.head === true" class="title">{{ link.name }}</div>
+    </div>
     </nav>
   </Transition>
 </template>

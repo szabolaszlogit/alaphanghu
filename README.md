@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Alaphang.com
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Vue 3, VueRouter
 
-## Recommended IDE Setup
+## git clone https://github.com/szabolaszlogit/alaphanghu.git
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## npm install
+
+## cd alaphang
+
+## npm run dev
