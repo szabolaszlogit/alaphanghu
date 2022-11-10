@@ -69,6 +69,20 @@ const routes = [
     path: "/akkordjeloles",
     component: () => import("./posts/Akkordjeloles.vue"),
   },
+  { path: "/mire-lesz-szuksegem", component: () => import("./posts/MireLesz.vue") },
+  { path: "/mennyi-ido", component: () => import("./posts/MennyiIdo.vue") },
+  { path: "/gyakorlas", component: () => import("./posts/Gyakorlas.vue") },
+  { path: "/gitartartas", component: () => import("./posts/Gitartartas.vue") },
+  { path: "/hangok-lefogasa", component: () => import("./posts/HangokLefogasa.vue") },
+  { path: "/hangolas", component: () => import("./posts/Hangolas.vue") },
+  { path: "/akkordtanulas", component: () => import("./posts/Akkordtanulas.vue") },
+  { path: "/akkordtanulas-hibak", component: () => import("./posts/AkkordtanulasHibak.vue") },
+  { path: "/lehuzas", component: () => import("./posts/Lehuzas.vue") },
+  { path: "/akkordvaltas", component: () => import("./posts/Akkordvaltas.vue") },
+  { path: "/emoll", component: () => import("./posts/EMoll.vue") },
+  { path: "/amoll", component: () => import("./posts/AMoll.vue") },
+  { path: "/adur-ddur-edur", component: () => import("./posts/AdDdEd.vue") },
+
 ];
 
 const router = createRouter({

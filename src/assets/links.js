@@ -24,6 +24,21 @@ const links = [
   { to: "/jelolesek", txt: "Jelőlések" },
   { to: "/tabulatura", txt: "A tabulatúra" },
   { to: "/akkordjeloles", txt: "Akkordjelölés" },
+  { title: "Mielőtt nekikezdünk" },
+  { to: "/mire-lesz-szuksegem", txt: "Mire lesz szükségem?" },
+  { to: "/mennyi-ido", txt: "Mennyi idő?" },
+  { to: "/gyakorlas", txt: "Gyakorlás" },
+  { to: "/gitartartas", txt: "A gitár tartása" },
+  { to: "/hangok-lefogasa", txt: "A hangok lefogása" },
+  { to: "/hangolas", txt: "Hangolás" },
+  { title: "Ritmusgitár 1." },
+  { title: "Ritmusgitár 1." },
+  { to: "/akkordtanulas-hibak", txt: "Akkordtanulás - hibák" },
+  { to: "/lehuzas", txt: "Lehúzás" },
+  { to: "/akkordvaltas", txt: "Akkordváltás" },
+  { to: "/emoll", txt: "E moll" },
+  { to: "/amoll", txt: "A moll" },
+  { to: "/adur-ddur-edur", txt: "A dúr, D dúr, E dúl" },
 ];
 
 export default links;
