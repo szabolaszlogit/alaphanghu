@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const HomePage = () => import("./components/HomePage.vue");
-const ContactPage = () => import("./components/ContactPage.vue");
 const TransPonator = () => import("./pages/TransPonator.vue");
 const ChordProgression = () => import("./pages/ChordProgression.vue");
 const routes = [
@@ -13,7 +12,7 @@ const routes = [
   {
     path: "/kapcsolat",
     name: "kapcsolat",
-    component: ContactPage,
+    component: () => import("./components/ContactPage.vue"),
   },
   {
     path: "/transzponator",

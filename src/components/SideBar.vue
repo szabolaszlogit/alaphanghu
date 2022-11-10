@@ -6,7 +6,7 @@ import links from "../assets/links";
   <nav>
     <div v-for="link in links">
       <router-link v-if="link.head === false" :to="link.ref">{{ link.name }}</router-link>
-      <div v-if="link.head === true" class="title">{{ link.name }}</div>
+      <div v-if="link.head === true" class="title"> {{ link.name }}</div>
     </div>
   </nav>
 </template>
@@ -34,7 +34,7 @@ nav a {
 
 .title{
   margin: 1rem 0;
-  padding: 0.5rem;
+  padding: 0.5rem 1em;
   color: var(--black);
   background-color: var(--green);
 

@@ -84,6 +84,7 @@ Cardsubtitle{
 }
 img {
   max-width: 90vw;
+  height: auto;
   display: block;
 }
 
