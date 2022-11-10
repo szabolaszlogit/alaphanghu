@@ -17,7 +17,7 @@ let isOpen = ref(false);
         <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
       </svg>
     </div>
-    <img class="header-items" src="/logo.svg" alt="alaphang logo" />
+    <img class="header-items" width="100%" height="auto" src="/logo.svg" alt="alaphang logo" />
     <div class="header-items"><router-link to="/">Alaphang</router-link></div>
   </header>
 
