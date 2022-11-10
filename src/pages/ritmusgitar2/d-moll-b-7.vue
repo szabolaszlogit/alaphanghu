@@ -27,7 +27,7 @@
 
       <img
         class="md:max-w-md"
-        src="../assets/pages/akkordjeloles/b7.svg"
+        src="../../assets/pages/akkordjeloles/b7.svg"
         alt="Akkord b7"
       />
       <img
