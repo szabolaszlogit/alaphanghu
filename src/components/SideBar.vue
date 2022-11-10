@@ -5,8 +5,8 @@ import links from "../assets/links";
 <template>
   <nav>
     <div v-for="link in links">
-      <router-link v-if="link.to" :to="link.to">{{ link.txt }}</router-link>
-      <div v-if="link.title" class="title">{{ link.title }}</div>
+      <router-link v-if="link.head === false" :to="link.ref">{{ link.name }}</router-link>
+      <div v-if="link.head === true" class="title">{{ link.name }}</div>
     </div>
   </nav>
 </template>
