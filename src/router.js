@@ -289,6 +289,11 @@ const routes = [
     path: "/utravalo/proba",
     component: () => import("./pages/utravalo/proba.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "404",
+    component: () => import("./pages/404.vue"),
+  },
 ];
 
 const router = createRouter({
