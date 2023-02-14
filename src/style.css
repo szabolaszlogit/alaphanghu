@@ -28,6 +28,13 @@ body {
   background-color: var(---grey);
 }
 
+.patreon{
+  border: 1px solid var(--blue-light);
+  padding: 1rem;
+  background-color: var(--green-light);
+}
+
+
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;

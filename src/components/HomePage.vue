@@ -1,6 +1,15 @@
 <script setup></script>
 
 <template>
+  <div class="patreon">
+    <p>Támogasd az oldalt a Patreonon!</p>
+    <p><a href="https://www.patreon.com/Alaphang" target="_blank" rel="noopener noreferrer">Az Alaphang Patreon oldala</a></p>
+    <p>Ha hasznosnak találod ezt a weboldalt, segíthetsz a működésében.</p>
+    <p>Cserébe oktatóanyagokat tölthetsz le, a támogatóknak elérhető tartalmak folyamatosan bővülnek.</p>
+    <p>Letölthető:</p>
+    <p>Ez a weboldal e-book és pdf formátumban</p>
+    <p>A legfontosabb akkordok nyomtatható formátumban</p>
+  </div>
   <h1>Alaphang - mert valahol el kell kezdeni!</h1>
   <h2>Kinek szól ez a weboldal?</h2>
   <p>
